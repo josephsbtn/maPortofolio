@@ -1,6 +1,5 @@
 "use client";
-import { IconArrowNarrowRight } from "@tabler/icons-react";
-import React, { useState, useRef, useId, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface SlideData {
   section: React.ReactNode;
@@ -28,31 +27,15 @@ const Slide = ({ slide, index, current }: SlideProps) => {
 
 interface CarouselProps {
   slides: SlideData[];
-  currentPage: (index: number) => void;
+  currentPage: (index: number) => number;
 }
 
 export function Carousel({ slides, currentPage }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    setCurrent(currentPage()); // ✅ Call function to get the value
+    setCurrent(currentPage(current)); // ✅ Call function to get the value
   }, [currentPage]);
-
-  const handlePreviousClick = () => {
-    setCurrent((prev) => {
-      const newIndex = (prev - 1 + slides.length) % slides.length;
-      currentPage(newIndex); // ✅ Notify parent
-      return newIndex;
-    });
-  };
-
-  const handleNextClick = () => {
-    setCurrent((prev) => {
-      const newIndex = (prev + 1) % slides.length;
-      currentPage(newIndex); // ✅ Notify parent
-      return newIndex;
-    });
-  };
 
   return (
     <div className="relative w-screen h-screen overflow-hidden ">

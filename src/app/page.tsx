@@ -10,7 +10,7 @@ const AboutMe = () => (
   <div className="flex flex-col items-center justify-center h-full text-white text-center p-8">
     <h2 className="text-4xl font-bold">About Me</h2>
     <p className="mt-4 max-w-lg text-lg">
-      Hi! I'm a passionate developer who loves building interactive web
+      Hi! I&apos;m a passionate developer who loves building interactive web
       applications.
     </p>
   </div>

@@ -1,18 +1,5 @@
 import React from "react";
-import { Montserrat_Alternates, Viga } from "next/font/google";
 import { TextGenerateEffect } from "./text-generate-effect";
-
-const montserrat = Montserrat_Alternates({
-  variable: "--font-montserrat",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-});
-
-const viga = Viga({
-  variable: "--font-viga",
-  subsets: ["latin"],
-  weight: ["400"],
-});
 
 const Hero = () => {
   return (
