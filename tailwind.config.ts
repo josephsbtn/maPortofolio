@@ -76,8 +76,8 @@ const config = {
         },
       },
       fontFamily: {
-        montserrat: ["var(--font-montserrat)", "sans-serif"],
-        montserratAlt: ["var(--font-montserrat-alternates)", "sans-serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+        montserratAlt: ["Montserrat Alternates", "sans-serif"],
         viga: ["Viga", "sans-serif"],
       },
       borderRadius: {

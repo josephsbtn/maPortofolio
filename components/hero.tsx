@@ -16,28 +16,17 @@ const viga = Viga({
 
 const Hero = () => {
   return (
-    <div className="flex relative flex-col justify-center items-center h-screen">
+    <div
+      id="home"
+      className="flex relative flex-col justify-center items-center h-screen w-screen">
       <div className="flex flex-col justify-center items-center space-y-3">
-        <div className="flex flex-col justify-center items-center -space-y-3">
+        <div className="flex flex-col justify-center items-center space-y-3 max-w-md ">
+          <h1 className="font-viga text-sm tracking-widest text-white ">
+            I am/私は/saya
+          </h1>
           <TextGenerateEffect
-            words="I am/私は/saya"
-            className="text-sm text-white font-viga"
-          />
-
-          <div className=" max-w-lg -space-y-5">
-            <TextGenerateEffect
-              words="Joseph Sebastian"
-              className="text-white text-5xl max-w-lg font-viga leading-[40px] font-bold text-center"
-            />
-            <TextGenerateEffect
-              words="Rosario Putra"
-              className="text-text-secondary font-viga text-5xl max-w-lg leading-[40px] font-bold text-center"
-            />
-          </div>
-
-          <TextGenerateEffect
-            words="Fullstack Web Developer"
-            className="text-sm text-white font-viga"
+            className="font-viga text-3xl md:text-4xl lg:text-5xl xl:text-5xl text-center max-w-[35vw] "
+            words="Turn your ideas into real-world digital products"
           />
         </div>
 
