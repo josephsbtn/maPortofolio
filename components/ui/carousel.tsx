@@ -34,8 +34,8 @@ export function Carousel({ slides, currentPage }: CarouselProps) {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
-    setCurrent(currentPage(current)); // ✅ Call function to get the value
-  }, [currentPage]);
+    setCurrent(currentPage(current));
+  }, [currentPage, current]); // ✅ Include 'current'
 
   return (
     <div className="relative w-screen h-screen overflow-hidden ">
