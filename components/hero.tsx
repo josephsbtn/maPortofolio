@@ -13,7 +13,7 @@ const Hero = () => {
           </h1>
           <TextGenerateEffect
             className="font-viga text-3xl md:text-4xl lg:text-5xl xl:text-5xl text-center max-w-[35vw] "
-            words="Turn your ideas into real-world digital products"
+            words="Joseph Sebastian Rosario Putra"
           />
         </div>
 
@@ -21,7 +21,9 @@ const Hero = () => {
           <a className="bg-[#1E190F] px-4 py-2 rounded-lg font-viga text-white">
             HIRE ME
           </a>
-          <a className="font-viga text-white ">MY PROJECTS</a>
+          <a className="font-viga text-white " href="#projects">
+            MY PROJECTS
+          </a>
         </div>
       </div>
     </div>
