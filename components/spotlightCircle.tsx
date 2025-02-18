@@ -20,7 +20,7 @@ const SpotlightCircle = () => {
       className="h-auto max-w-24 w-full aspect-square 
      rounded-full absolute top-1/2 left-1/2 -translate-x-1/2
       -translate-y-1/2 bg-gradient-to-t from-[#1E190F]/100
-       to-[#ffffff]/80 blur-3xl animate-spotlight -z-10"
+       to-[#ffffff]/80 blur-3xl animate-spotlight z-10"
       style={{
         top: `${position.y}px`,
         left: `${position.x}px`,

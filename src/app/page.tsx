@@ -34,6 +34,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
+      console.log(scrollPosition);
       if (scrollPosition > 0) {
         setCurrentPage(1);
       } else if (scrollPosition > 100 && scrollPosition < 200) {
