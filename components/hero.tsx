@@ -1,7 +1,11 @@
 import React from "react";
 import { TextGenerateEffect } from "./text-generate-effect";
 
-const Hero = () => {
+interface NavbarProp {
+  setCurrentSlide: (slide: number) => void;
+}
+
+const Hero = ({ setCurrentSlide }: NavbarProp) => {
   return (
     <div
       id="home"
@@ -21,7 +25,13 @@ const Hero = () => {
           <a className="bg-[#1E190F] px-4 py-2 rounded-lg font-viga text-white">
             HIRE ME
           </a>
-          <a className="font-viga text-white " href="#projects">
+          <a
+            className="font-viga text-white "
+            href="#projects"
+            onClick={(e) => {
+              e.preventDefault();
+              setCurrentSlide(1);
+            }}>
             MY PROJECTS
           </a>
         </div>

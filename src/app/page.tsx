@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Hero from "../../components/hero";
 import Navbar from "../../components/navigation/navbar";
 import SpotlightCircle from "../../components/spotlightCircle";
 import { Carousel } from "../../components/ui/carousel";
+import Project from "../../components/Project";
 
 const AboutMe = () => (
   <div className="flex flex-col items-center justify-center h-full text-white text-center p-8">
@@ -31,21 +32,6 @@ const Contact = () => (
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(0);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      console.log(scrollPosition);
-      if (scrollPosition > 0) {
-        setCurrentPage(1);
-      } else if (scrollPosition > 100 && scrollPosition < 200) {
-        setCurrentPage(2);
-      } else {
-        setCurrentPage(0);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  });
   return (
     <main className="relative bg-background flex flex-col justify-center items-center overflow-hidden mx-auto px-5 sm:px-10">
       <Navbar setCurrentSlide={setCurrentPage} />
@@ -59,10 +45,10 @@ export default function Home() {
       {/* Carousel */}
       <div className="max-w-7xl w-full flex justify-start items-center overflow-hidden relative">
         <Carousel
-          currentPage={() => currentPage}
+          currentPage={() => currentPage} // Pass a function that returns the currentPage state here
           slides={[
-            { section: <Hero /> },
-            { section: <AboutMe /> },
+            { section: <Hero setCurrentSlide={setCurrentPage} /> },
+            { section: <Project /> },
             { section: <Contact /> },
           ]}
         />

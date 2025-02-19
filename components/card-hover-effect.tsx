@@ -51,7 +51,12 @@ export const HoverEffect = ({
           <Card>
             <CardTitle>{item.title}</CardTitle>
             <CardDescription>{item.description}</CardDescription>
-            <CardImage src={item.src} alt={item.title} />
+            <CardImage
+              src={item.src}
+              alt={item.title}
+              width={500}
+              height={500}
+            />
           </Card>
         </Link>
       ))}
@@ -113,12 +118,23 @@ export const CardImage = ({
   src,
   alt,
   className,
+  width,
+  height,
 }: {
   src: string;
   alt: string;
   className?: string;
+  width?: number;
+  height?: number;
 }) => {
   return (
-    <Image src={src} alt={alt} className={className} layout="responsive" />
+    <Image
+      src={src}
+      alt={alt}
+      className={className}
+      width={width}
+      height={height}
+      layout="responsive"
+    />
   );
 };
