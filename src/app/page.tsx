@@ -7,16 +7,6 @@ import SpotlightCircle from "../../components/spotlightCircle";
 import { Carousel } from "../../components/ui/carousel";
 import Project from "../../components/Project";
 
-const AboutMe = () => (
-  <div className="flex flex-col items-center justify-center h-full text-white text-center p-8">
-    <h2 className="text-4xl font-bold">About Me</h2>
-    <p className="mt-4 max-w-lg text-lg">
-      Hi! I&apos;m a passionate developer who loves building interactive web
-      applications.
-    </p>
-  </div>
-);
-
 const Contact = () => (
   <div className="flex flex-col items-center justify-center h-full text-white text-center p-8">
     <h2 className="text-4xl font-bold">Contact Me</h2>
